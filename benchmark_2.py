@@ -33,7 +33,7 @@ while True:
     amount = input("How many do you want to buy ")
 
 
-    if amount > "0" or amount < "9" :
+    if amount.isdigit():
         amount = int(amount)
     else:
         print("your number was invalid please try again")
@@ -71,4 +71,5 @@ while True:
             print("Not enough money")
 
     else:
+
         print("Invalid choice")
