@@ -66,7 +66,7 @@ while True:
         if cost <= money:
             money = money - cost
             inventory["toppings"] = inventory["toppings"] + amount
-            print("you bough toppings")
+            print("you bought toppings")
         else:
             print("Not enough money")
 
