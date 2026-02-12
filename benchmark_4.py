@@ -8,7 +8,7 @@ customers = []
 for i in range(10):
     customers.append(Customer())
 
-attributes = customer.get_customer_attributes()
+attributes = customers.get_customer_attributes()
 
 
 sweetness_pref = attributes["sweetness"]
