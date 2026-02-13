@@ -10,7 +10,7 @@ for i in range(10):
 
 for i in customers:
     attributes = i.get_customer_attributes()
-    sweetness_pref = attributes["sweetness"]
-    ice_pref = attributes["ice"]
+    sweetness_pref = attributes["ice_Cream"]
+    ice_pref = attributes["toppings"]
     price_limit = attributes["price"]
 
