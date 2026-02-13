@@ -50,7 +50,7 @@ while True:
             inventory["ice_cream"] = inventory["ice_cream"] + amount
             print("you bough ice creams")
         else:
-            print("=======TO BROKE======")
+            print("======TO BROKE======")
 
     elif choice == "2":
         cost = amount * prices["cones"]
@@ -59,7 +59,7 @@ while True:
             inventory["cones"] = inventory["cones"] + amount
             print("you bought cones")
         else:
-            print("Not enough money")
+            print("======TO BROKE======")
 
     elif choice == "3":
         cost = amount * prices["toppings"]
@@ -68,7 +68,7 @@ while True:
             inventory["toppings"] = inventory["toppings"] + amount
             print("you bought toppings")
         else:
-            print("Not enough money")
+            print("======TO BROKE======")
 
     else:
 
