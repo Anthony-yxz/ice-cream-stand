@@ -36,7 +36,7 @@ while True:
     if amount.isdigit():
         amount = int(amount)
     else:
-        print("your number was invalid please try again")
+        print("======INVALID======")
         continue
 
     if amount <= 0:
@@ -50,14 +50,14 @@ while True:
             inventory["ice_cream"] = inventory["ice_cream"] + amount
             print("you bough ice creams")
         else:
-            print("Not enough money")
+            print("=======TO BROKE======")
 
     elif choice == "2":
         cost = amount * prices["cones"]
         if cost <= money:
             money = money - cost
             inventory["cones"] = inventory["cones"] + amount
-            print("you bough cones")
+            print("you bought cones")
         else:
             print("Not enough money")
 
