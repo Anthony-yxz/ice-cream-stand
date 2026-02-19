@@ -44,7 +44,7 @@ while True:
         continue
 
     if amount <= 0:
-        print("You must buy at least 1 item or exit the shop")
+        print("You can either shop for items, or exit the shop")
         continue
 
     if choice == "1":
@@ -52,7 +52,7 @@ while True:
         if cost <= money:
             money = money - cost
             inventory["ice_cream"] = inventory["ice_cream"] + amount
-            print("you bough ice creams")
+            print("you brought ice creams")
         else:
             print("Not enough money")
 
