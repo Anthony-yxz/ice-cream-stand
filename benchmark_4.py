@@ -16,6 +16,7 @@ for customer in customers:
     toppings_pref = atrributes["toppings"]
     price_limit = atrributes["price"]
 
+
 =======
 import customer_class
 
@@ -24,8 +25,6 @@ from customer_class import Customer
 
 customers = []
 
-for i in range(10):
-    customers.append(Customer())
 
 for i in customers:
     attributes = i.get_customer_attributes()
