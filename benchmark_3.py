@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import benchmark_2
 
 
@@ -75,3 +74,4 @@ if cone_limit < max_cones:
 
 print("Maximum number of cones you can make:", max_cones)
 =======
+
