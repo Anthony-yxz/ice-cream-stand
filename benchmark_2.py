@@ -30,12 +30,7 @@ while True:
         print("you chose to exit the shop")
         break
 
-    if int(choice) > 4 or int(choice) < 1:
-        print("that is a invalid choice")
-        continue
-
     amount = input("How many do you want to buy ")
-
 
     if amount.isdigit():
         amount = int(amount)
@@ -77,3 +72,4 @@ while True:
     else:
 
         print("Invalid choice")
+
