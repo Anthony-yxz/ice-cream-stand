@@ -1,4 +1,4 @@
-money = 25.0
+money = 150.00
 
 inventory = {
     "ice_cream": 0,
@@ -72,4 +72,5 @@ while True:
     else:
 
         print("Invalid choice")
+
 
