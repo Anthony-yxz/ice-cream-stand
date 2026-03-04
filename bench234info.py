@@ -1,4 +1,4 @@
-money = 150.0
+money = 100.00
 day = 1
 
 inventory = {
@@ -14,5 +14,6 @@ recipe = {
 }
 
 price_per_item = 1.0
+
 
 cones_sold_today = 0
