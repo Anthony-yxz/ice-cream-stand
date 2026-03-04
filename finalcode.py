@@ -17,7 +17,8 @@ while True:
         time.sleep(1.5)
         bench234info.money =+ 50
     if bench234info.day > 7:
-        print("Congratulations! You survived 7 days!")
+        print("Congratulations on surviving 7 full days, it might have been the easiest game in the world,\n","but its the effort that counts, lebron soon went on to give you 5 million dollars like he prommised")
+        print("+5 million dollars from lebron")
         time.sleep(1.5)
         break   
 
