@@ -1,59 +1,60 @@
 import time
-import benchmark_2
-import benchmark_3
+import bench234info
 from customer_class import Customer
 
-recipe = benchmark_3.recipe
-price_per_item = benchmark_3.price_per_item
-inventory = benchmark_2.inventory
 
-customers = []
+def run_day():
+    recipe = bench234info.recipe
+    price_per_item = bench234info.price_per_item
+    inventory = bench234info.inventory
 
-for i in range(10):
-    customers.append(Customer())
+    customers = []
 
-print("your day has started\n")
+    for i in range(10):
+        customers.append(Customer())
 
-time.sleep(3)
+    print("your day has started\n")
 
-customer_number = 1
+    time.sleep(3)
 
-for customer in customers:
-    attributes = customer.get_customer_attributes()
+    customer_number = 1
 
-    ice_pref = attributes["ice_cream"]
-    topping_pref = attributes["toppings"]
-    price_limit = attributes["price"]
+    for customer in customers:
+        attributes = customer.get_customer_attributes()
 
-    print("Customer",customer_number)
-    print("wants",ice_pref,"big handfulls of icecream")
-    print("they wanted",topping_pref,"toppings")
-    print("they will pay", price_limit)
-    print("=========================================================")
+        ice_pref = attributes["ice_cream"]
+        topping_pref = attributes["toppings"]
+        price_limit = attributes["price"]
+
+        print("Customer",customer_number)
+        print("wants",ice_pref,"big handfulls of icecream")
+        print("they wanted",topping_pref,"toppings")
+        print("they will pay", price_limit)
+        print("=========================================================")
 
 
-    if (
-        inventory["ice_cream"] < recipe["ice_cream"]
-        or inventory["toppings"] < recipe["toppings"]
-        or inventory["cones"] < recipe["cones"]
-    ):
-        print("Out of ingredients! Day is over.")
-        break
+        if (
+            inventory["ice_cream"] < recipe["ice_cream"]
+            or inventory["toppings"] < recipe["toppings"]
+            or inventory["cones"] < recipe["cones"]
+        ):
+            print("Out of ingredients! Day is over.")
+            break
 
-    if (
-        recipe["ice_cream"] >= ice_pref
-        and recipe["toppings"] >= topping_pref
-        and price_per_item <= price_limit
-    ):
-        print("YAYAYA your customer bought your ice cream\n")
-        inventory["ice_cream"] = inventory["ice_cream"] - recipe["ice_cream"]
-        inventory["toppings"] = inventory["toppings"] - recipe["toppings"]
-        inventory["cones"] = inventory["cones"] - recipe["cones"]
-    else:
-        print("customer thought ice cream was trash\n")
+        if (
+            recipe["ice_cream"] >= ice_pref
+            and recipe["toppings"] >= topping_pref
+            and price_per_item <= price_limit
+        ):
+            print("YAYAYA your customer bought your ice cream\n")
+            bench234info.money = bench234info.money + price_per_item
+            inventory["ice_cream"] = inventory["ice_cream"] - recipe["ice_cream"]
+            inventory["toppings"] = inventory["toppings"] - recipe["toppings"]
+            inventory["cones"] = inventory["cones"] - recipe["cones"]
+        else:
+            print("customer thought ice cream was trash\n")
 
-    customer_number += 1
+        customer_number += 1
 
-print("your day ended NOW LEAVE")
-print(inventory)
+    print("your day ended NOW LEAVE")
 
