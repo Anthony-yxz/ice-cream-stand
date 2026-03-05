@@ -11,15 +11,15 @@ class Customer:
     def __init__(self, ice_cream_preference=None, toppings_preference=None, price_point=None):
         self.ice_cream_preference = (
             ice_cream_preference if ice_cream_preference is not None
-            else random.randint(1, 3)
+            else random.randint(2, 5)
         )
         self.toppings_preference = (
             toppings_preference if toppings_preference is not None
-            else random.randint(0, 3)
+            else random.randint(2, 5)
         )
         self.price_point = (
             price_point if price_point is not None
-            else round(random.uniform(1.0, 4.0),2)
+            else round(random.uniform(2, 4.0),2)
         )
 
     def get_customer_attributes(self):
@@ -29,4 +29,5 @@ class Customer:
             "price": self.price_point
 
         }
+
 
