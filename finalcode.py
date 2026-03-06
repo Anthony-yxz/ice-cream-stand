@@ -5,6 +5,8 @@ import benchmark_3
 import benchmark_4
 import bench234info
 
+print("\n"*2)
+
 benchmark_2.run_shop()
 benchmark_3.set_recipe()
 
